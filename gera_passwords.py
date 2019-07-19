@@ -19,13 +19,11 @@ def cria_string(NumCaracteres):
     '''Define uma string com numeros e letras, maiusculas e minusculas,
         que servira para criar a password.
     '''
-    # simbolos = '!Ã¢â‚¬â€œ$%#?_*'
     simbolos = '!$%#?*'
     str_ascii = string.digits + string.ascii_letters + simbolos
     str_out = ""
     for i in range(NumCaracteres):
         str_out += gera_password(str_ascii)
-        # print(str_out)
     return str_out
 
 
@@ -36,7 +34,6 @@ def gera_password(str_ascii):
 
 def cria_ficheiro(lpass=[], ficheiro=None):
     '''Recebe a lista com as passwords e grava um ficheiro passw.txt.'''
-    # print("lista criada=", l)
     fich = open(ficheiro, 'w')
     for i in range(len(lpass)):
         fich.write(lpass[i] + '\n')
