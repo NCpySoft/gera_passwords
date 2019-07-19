@@ -35,21 +35,18 @@ def gera_password(str_ascii):
 def cria_ficheiro(lpass=[], ficheiro=None):
     '''Recebe a lista com as passwords e grava um ficheiro passw.txt.'''
     fich = open(ficheiro, 'w')
-    for i in range(len(lpass)):
-        fich.write(lpass[i] + '\n')
+    [fich.write(lpass[i] + '\n') for i in range(len(lpass))]
     fich.close()
 
 
 def main_loop():
-    lista = []
+    # lista = []
     try:
         str = input("[0 - Abandona] Numero de caracteres da Password [4 - 16]: ")
         if ((int(str) >= 4) and (int(str) <= 16)):
             num = input("Número de Passwords a gerar: ")
-            for i in range(int(num)):
-                lista.append(cria_string(int(str)))
-                print(lista[i])
-            print("\n")
+            lista = [cria_string(int(str)) for i in range(int(num))]
+            [print(password) for password in lista]
             cria_ficheiro(lista, "./passw.txt")
         elif int(str) == 0:
             exit()
