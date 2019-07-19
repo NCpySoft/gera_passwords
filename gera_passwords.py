@@ -1,13 +1,14 @@
-# --------------------------------------------------------------------
-# Programa de geraçao de passwords entre 4 e 16 caracteres
+# ------------------------------------------------------------------------------------------
+# Programa de geraçao de passwords entre 4 e 16 caracteres e que,
+# para além de mostrar as passwords na consola, cria ficheiro .txt de output
 # NC  22-10-2013
-# V1.0.0a 23-10-2013 : criaçao do esqueleto do programa em consola
-# V1.0.1a 19-07-2019 : grava ficheiro .txt com passwords geradas
+# V1.0.0 23-10-2013 : criaçao do esqueleto do programa em consola
+# V1.0.1 19-07-2019 : grava ficheiro .txt com passwords geradas
 #                      1a Versao para o GitHub
-# --------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------
 __author__ = 'Nelson Cerqueira'
-__maintainer__ = "NC PySoft"
-__version__ = "V1.0.1a"
+__maintainer__ = "NC PySoft <nelsonfvc@hotmail.com>"
+__version__ = "V1.0.1 2019-07-19"
 
 
 import string
