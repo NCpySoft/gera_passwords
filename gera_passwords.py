@@ -10,20 +10,22 @@ __author__ = 'Nelson Cerqueira'
 __maintainer__ = "NC PySoft <nelsonfvc@hotmail.com>"
 __version__ = "V1.0.1 2019-07-19"
 
-
 import string
 import random
+
+
+class Parametros(object):
+    """Classe para definição de variáveis globais"""
+    STR_ASCII = string.digits + string.ascii_letters+'!$%#?*'
 
 
 def cria_string(NumCaracteres):
     '''Define uma string com numeros e letras, maiusculas e minusculas,
         que servira para criar a password.
     '''
-    simbolos = '!$%#?*'
-    str_ascii = string.digits + string.ascii_letters + simbolos
     str_out = ""
     for i in range(NumCaracteres):
-        str_out += gera_password(str_ascii)
+        str_out += gera_password(Parametros.STR_ASCII)
     return str_out
 
 
@@ -40,7 +42,6 @@ def cria_ficheiro(lpass=[], ficheiro=None):
 
 
 def main_loop():
-    # lista = []
     try:
         str = input("[0 - Abandona] Numero de caracteres da Password [4 - 16]: ")
         if ((int(str) >= 4) and (int(str) <= 16)):
